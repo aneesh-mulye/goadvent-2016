@@ -9,7 +9,7 @@
     - [X] Part 1
     - [X] Part 2
 - [ ] Day  3
-    - [ ] Part 1
+    - [X] Part 1
     - [ ] Part 2
 - [ ] Day  4
     - [ ] Part 1
@@ -111,3 +111,20 @@ Complex numbers turning out surprisingly useful here.
 
 As a friend said, a language with a *proper* numeric stack has not yet been
 made.
+
+### Day 3
+
+TIL that Go has accreted *two* sets of functions for sorting (and almost
+certainly other things as well): one from the Before \[T\]imes, when you didn't
+have generics and had to have different sort functions for each type, such as
+`sort.Ints`, and another from after generics, from the `slices` package, which
+contains a generic `slices.Sort` that operates on any ordered type.
+
+I'm increasingly tempted to use `https://github.com/samber/lo`, or something
+like it, for solving these problems. It's just so much more congenial to think
+of them in terms of the functional sequence transforms rather than basically
+building up a variant of that machinery every single time for every problem
+using manual loops and whatnot.
+
+Given that I want to learn it, may just do that once I've solved enough problems
+that I'm confident in my ability to work idiomatically within the language.
