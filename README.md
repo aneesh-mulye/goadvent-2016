@@ -2,12 +2,12 @@
 
 ## Status
 
-- [x] Day  1
-    - [x] Part 1
-    - [x] Part 2
-- [ ] Day  2
-    - [ ] Part 1
-    - [ ] Part 2
+- [X] Day  1
+    - [X] Part 1
+    - [X] Part 2
+- [X] Day  2
+    - [X] Part 1
+    - [X] Part 2
 - [ ] Day  3
     - [ ] Part 1
     - [ ] Part 2
@@ -104,3 +104,10 @@ The lower level machinery is good; still, slightly surprising.
 
 TODO: any existing utility libraries that provide all these things one
 sorta-kinda expects from a language flirting with dynamism, implied by ∃GC?
+
+### Day 2
+
+Complex numbers turning out surprisingly useful here.
+
+As a friend said, a language with a *proper* numeric stack has not yet been
+made.
