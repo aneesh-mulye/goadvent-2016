@@ -21,4 +21,11 @@ func main() {
 		return
 	}
 	fmt.Println(possibleTriangles)
+
+	possibleTriangles, err = day03.Day03p2(input)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%s", err.Error())
+		return
+	}
+	fmt.Println(possibleTriangles)
 }

@@ -55,3 +55,43 @@ func Day03p1(input []string) (int, error) {
 	}
 	return total, nil
 }
+
+func Day03p2(input []string) (int, error) {
+	var total int
+	var err error
+	var triples [][]int
+	for i, line := range input {
+		var sides []int
+		sides, err = parseInputLine(line)
+		if err != nil {
+			return 0, fmt.Errorf("Error parsing line %d: %w", i+1, err)
+		}
+		triples = append(triples, sides)
+	}
+	parsed := make([]int, 3*len(triples))
+	ind := 0
+	for i := range 3 {
+		for _, triple := range triples {
+			parsed[ind] = triple[i]
+			ind++
+		}
+	}
+	ind = 0
+	for _, triple := range triples {
+		for i := range 3 {
+			triple[i] = parsed[ind]
+			ind++
+		}
+	}
+	for _, triple := range triples {
+		var possible bool
+		possible, err = possibleTriangle(triple)
+		if err != nil {
+			return 0, err
+		}
+		if possible {
+			total++
+		}
+	}
+	return total, nil
+}
